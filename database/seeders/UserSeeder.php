@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'username' => 'pupu',
+            'username' => 'rahmatyo',
             'password' => Hash::make('123'),
         ]);
 
@@ -25,8 +25,21 @@ class UserSeeder extends Seeder
 
         Siswa::create([
             'id_user' => $user->id_user,
-            'nama' => 'pupu',
+            'nama' => 'rahmatyo',
             'nisn' => '123',
+            'kelas' => 'XII',
+            'jurusan' => 'RPL 1',
+        ]);
+
+        $user1 = User::create([
+            'username' => '321',
+            'password' => Hash::make('321'),
+        ]);
+
+        Siswa::create([
+            'id_user' => $user1->id_user,
+            'nama' => 'rizki',
+            'nisn' => '321',
             'kelas' => 'XII',
             'jurusan' => 'RPL 1',
         ]);

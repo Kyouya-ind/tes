@@ -1,8 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{ route('admin.home') }}" class="brand-link">
-        <span class="brand-text font-weight-light">Aspirasi</span>
-    </a>
+
 
     <!-- User Panel -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
@@ -49,7 +47,13 @@
                     </a>
                 </li>
 
-
+                <li class="nav-item">
+                    <a href="{{ route('admin.siswa.index') }}"
+                       class="nav-link {{ request()->routeIs('admin.kategori.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-tags"></i>
+                        <p>Data Siswa</p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a href="{{ route('admin.kategori.index') }}"
